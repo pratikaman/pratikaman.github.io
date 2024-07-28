@@ -1,38 +1,74 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div id="main">
-      <div id="nav">
-        <h4>About</h4>
-        <h4>News</h4>
-        <h4>Cart</h4>
-        <i class="ri-shopping-bag-4-line"></i>
-      </div>
-      <div id="center">
-        <h1>Lightly padded,<br> quilted jacket in <br> recyled polyster.</h1>
-        <div id="center-in">
-            <p>Exclusive brands aspire for the label haute <br>
-                couture, but the term is technically limited to <br>
-                members of the Chambre Syndicale de la Haute</p>
-            <div id="right">
-                <div class="elem"><a href="">Add to cart</a><i class="ri-arrow-right-up-line"></i></div>
-                <div class="elem"><a href="">Product details</a><i class="ri-arrow-right-up-line"></i></div>
-                <div class="elem"><a href="">Shipping</a><i class="ri-arrow-right-up-line"></i></div>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Terminal Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>> <span class="command">cat</span> resume.txt<span class="cursor">█</span></h1>
+        <div class="contact-info output">
+            <p>Name: Pratik Aman</p>
+            <p>Email: pratikaman.atom@gmail.com | Phone: (91) 7369854621 | Location: Bangalore, India</p>
+            <p>LinkedIn: linkedin.com/in/pratikaman/ | GitHub: github.com/pratikaman</p>
         </div>
-      </div>
-      <div id="bottom"></div>
-    </div>
-  </body>
+    </header>
+
+    <section class="section">
+        <h2>> <span class="command">grep</span> "Summary" resume.txt</h2>
+        <p class="output">Experienced software developer with a passion for creating efficient and scalable applications. Skilled in multiple programming languages and frameworks, with a strong background in web development and database management. Proficient in Django and Flutter with 2 years of experience. Created a matrimony app showcasing expertise in both backend and mobile development.</p>
+    </section>
+
+    <section class="section">
+        <h2>> <span class="command">ls</span> skills/</h2>
+        <ul class="output">
+            <li>Programming_Languages: Python Javascript Dart</li>
+            <li>Web_Technologies: Django FastApi Flutter HTML5 CSS React</li>
+            <li>Databases: MySQL MongoDB</li>
+            <li>Tools: Git AWS</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>> <span class="command">cat</span> work_experience.log</h2>
+        <div class="job output">
+            <p class="job-title">Senior Software Engineer - TechCorp</p>
+            <p class="job-date">January 2020 - Present</p>
+            <ul>
+                <li>Lead development of microservices architecture for high-traffic e-commerce platform</li>
+                <li>Implemented CI/CD pipeline, reducing deployment time by 40%</li>
+                <li>Mentored junior developers and conducted code reviews</li>
+            </ul>
+        </div>
+        <div class="job output">
+            <p class="job-title">Software Developer - InnoSoft Solutions</p>
+            <p class="job-date">June 2017 - December 2019</p>
+            <ul>
+                <li>Developed and maintained multiple web applications using React and Node.js</li>
+                <li>Optimized database queries, improving application performance by 25%</li>
+                <li>Collaborated with UX team to implement responsive designs</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>> <span class="command">echo</span> $EDUCATION</h2>
+
+        <p class="output"><strong>Master of Science in Physics</strong></p>
+        <p class="output">Indian institute of technology Delhi, Graduated: 2019</p>
+
+        <p class="output"><strong>Bachelor of Science in Physics</strong></p>
+        <p class="output">Banaras Hindu University, Graduated: 2017</p>
+    </section>
+
+    <section class="section">
+        <h2>> <span class="command">ls</span> projects/</h2>
+        <ul class="output">
+            <li><strong>Task_Manager_App:</strong> Developed a full-stack web application using React and Express</li>
+            <li><strong>Weather_Forecasting_Tool:</strong> Created a Python script utilizing weather APIs and data visualization</li>
+        </ul>
+    </section>
+</body>
 </html>
