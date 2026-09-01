@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Courier New', Courier, monospace;
   line-height: 1.6;
@@ -62,4 +66,31 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+.contact-info a[href="#vibes"] {
+  color: #ffcc00;
+}
+
+.contact-info a[href="#vibes"]:hover {
+  color: #ffff00;
+}
+
+.vibes {
+  background-color: #001100;
+  padding: 10px 14px 14px;
+  border-radius: 5px;
+  border: 1px solid #003300;
+}
+
+.vibes h2 {
+  margin-top: 0;
+}
+
+.vibes a {
+  color: #ffcc00;
+}
+
+.vibes a:hover {
+  color: #ffff00;
 }
