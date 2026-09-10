@@ -117,5 +117,36 @@
 <!--            <li><strong>Crawl_Pilot:</strong> This project involves the development of a REST API suite for web crawling and data extraction. The primary goal is to provide efficient tools for scraping web pages, summarizing their content, and analyzing link structures. Additional functionality will include asynchronous bulk processing of URLs and reporting on crawled data.</li>-->
 <!--        </ul>-->
 <!--    </section>-->
+
+<button id="editToggle" contenteditable="false" aria-pressed="false" title="Make this page editable">&gt; <span class="command">vim</span> resume.txt</button>
+
+<script>
+(() => {
+    // The whole page becomes editable via the browser's own contenteditable.
+    // The toggle itself is contenteditable="false" so it stays clickable, and
+    // Escape always works, even if an edit mangles the button.
+    const btn = document.getElementById("editToggle");
+    const body = document.body;
+    const OFF = '&gt; <span class="command">vim</span> resume.txt';
+    const ON  = '&gt; <span class="command">:wq</span> — or esc';
+
+    const editing = () => body.contentEditable === "true";
+
+    function setEditing(on) {
+        body.contentEditable = on ? "true" : "false";
+        body.spellcheck = false;
+        body.classList.toggle("editing", on);
+        btn.innerHTML = on ? ON : OFF;
+        btn.setAttribute("aria-pressed", String(on));
+        btn.title = on ? "Stop editing" : "Make this page editable";
+        if (!on) getSelection().removeAllRanges();
+    }
+
+    btn.addEventListener("click", () => setEditing(!editing()));
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && editing()) { setEditing(false); btn.focus(); }
+    });
+})();
+</script>
 </body>
 </html>
